@@ -6,5 +6,5 @@ app_name = 'Music'
 urlpatterns = [
     url(r'^$', views.IndexView.as_view(), name='index'),
     url(r'^(?P<pk>[0-9]+)/$', views.DetailView.as_view(), name='detail'),
-    url(r'^albums/add/$', views.AlbumCreate.as_view(), name='album-create')
+    url(r'^albums/add/$', views.AlbumsCreate.as_view(), name='album-create')
 ]

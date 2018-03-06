@@ -15,7 +15,7 @@ class DetailView(generic.DetailView):
     template_name = 'Music/detail.html'
 
 
-class AlbumCreate(CreateView):
+class AlbumsCreate(CreateView):
     model = Albums
     fields = ['artist', 'album_title', 'genre', 'album_logo']
 
