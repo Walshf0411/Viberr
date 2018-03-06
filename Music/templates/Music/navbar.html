@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title%}Website{% endblock %}</title>
+        {% load staticfiles %}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="{% static 'Music/style.css'%}">
+    </head>
+
+    <body>
+    <!--Navigation bar-->
+        <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+
+            <!--Navigation bar header-->
+            <div class="navbar-header">
+                <div >
+                    <a href="#" class="navbar-brand">Website title goes here</a>
+                </div>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!--Navigation bar header ends-->
+
+            <!--Menu items-->
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="{% url 'Music:index' %}">Albums&nbsp
+                        <span class="glyphicon glyphicon-cd" ></span>
+                    </a></li>
+                    <li><a href="#">Music&nbsp
+                        <span class="glyphicon glyphicon-music"></span>
+                    </a></li>
+                </ul>
+            <!--Menu items-->
+
+            <!--Menu Items to the right-->
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Logout&nbsp
+                        <span class="glyphicon glyphicon-off"></span>
+                    </a></li>
+                </ul>
+            <!--Menu Items to the right-->
+
+                <!--Search Form-->
+                <form action="#" role="search" method="post" class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" name="q" class="form-control" placeholder="Search">
+                    </div>
+                    <input type="submit" value="Search" name="q" class="btn btn-default">
+                </form>
+            </div>
+
+        </div>
+    </nav>
+    <!--Navigation bar ends here-->
+    </body>
+{% block body %}
+{% endblock %}
+</html>
