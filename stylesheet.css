@@ -1,0 +1,49 @@
+.row
+{
+	background-color: lavender;
+	margin:3px;
+	min-height:300px;
+	
+}
+.col1
+{
+	background-color: lavender;
+	margin:3px;
+	min-height:300px;
+	border-style:solid;
+}
+.col2
+{
+	margin:3px;
+	min-height:20px;
+	text-align:center;
+	background-color: cyan; 
+}
+.col3
+{
+	margin:3px;
+	min-height:20px;
+	text-align:center;
+	background-color: cyan;
+}
+.col4
+{
+	margin:3px;
+	min-height:20px;
+	text-align:center;
+	background-color: cyan;
+}
+.col5
+{
+	margin:3px;
+	min-height:20px;
+	text-align:center;
+	background-color: cyan;
+}
+.col6
+{
+	margin:3px;
+	min-height:20px;
+	text-align:center;
+	background-color: cyan;
+}
