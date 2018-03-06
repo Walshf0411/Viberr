@@ -4,7 +4,7 @@ from .models import Albums
 
 class IndexView(generic.ListView):
     template_name = 'Music/index.html'
-
+    
     def get_queryset(self):
         return Albums.objects.all()
 

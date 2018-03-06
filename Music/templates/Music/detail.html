@@ -4,14 +4,14 @@
 {% endblock %}
 
 {% block body %}
-<img src="{{album.album_logo}}" alt="album logo goes here">
-<h1>Album Title : {{ album.album_title }}</h1>
-<h3>Artist name : {{ album.artist }}</h3>
+<img src="{{albums.album_logo}}" alt="album logo goes here">
+<h1>Album Title : {{ albums.album_title }}</h1>
+<h3>Artist name : {{ albums.artist }}</h3>
 
 <h3>Songs : </h3>
 
 <ul>
-    {% for song in album.songs_set.all %}
+    {% for song in albums.songs_set.all %}
     <li>{{song.song_title}}</li>
     {%endfor%}
 </ul>
