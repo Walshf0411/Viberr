@@ -1,0 +1,22 @@
+{% extends 'Music/navbar.html' %}
+
+{% block title %}
+Album
+{% endblock%}
+
+{% block body%}
+<h1>Album Create form</h1>
+<!--Form control-->
+<!--Enctype must be specified or else images wont be accepted-->
+<form action="" method="POST" enctype="multipart/form-data">
+    {%csrf_token%}
+    <div class="input-group" >
+        {% include 'Music/form-template.html'%}
+    </div>
+    <div class="input-group btn">
+        <button class="btn btn-success" type="submit">Add</button>
+    </div>
+</form>
+
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'Music/navbar.html' %}
+
+<!--The primary related details are stored in variable name
+similar to the model i.e songs-->
+{% block title %}
+Details for {{songs.song_title}}
+{% endblock %}
+
+{% block body %}
+<div class="jumbotron text-center">
+<h1>{{ songs.song_title }}</h1>
+
+<h3><strong>Song album : </strong>{{songs.album}}</h3>
+<h3><strong>Song format : </strong>{{songs.file_type}}</h3>
+<a href="{% url 'Music:song-delete' songs.pk %}">
+    <button class="btn btn-danger">
+    <span class="glyphicon glyphicon-trash"></span></button>
+</a>
+
+<a href="{% url 'Music:song-update' songs.pk %}">
+    <button class="btn btn-Primary">
+    <span class="glyphicon glyphicon-plus"></span>Update Song</button>
+</a>
+    </div>
+{% endblock %}

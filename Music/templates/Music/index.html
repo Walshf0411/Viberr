@@ -1,0 +1,23 @@
+{% extends 'Music/navbar.html' %}
+
+{% block title %}
+Albums
+{% endblock %}
+
+{% block body %}
+<h1>This is a list of all albums.</h1>
+
+<ul>
+    {% for album in object_list%}
+    <li>
+        <a href="{% url 'Music:detail' album.id %}">{{ album.album_title }}</a>
+    </li>
+    {% endfor %}
+</ul>
+<a href="{% url 'Music:album-create' %}">
+    <button class="btn btn-primary">
+        <span class="glyphicon glyphicon-plus"></span>&nbspAdd an Album
+    </button>
+</a>
+
+{% endblock %}

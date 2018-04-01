@@ -1,0 +1,14 @@
+{% for field in form %}
+<style>
+    .input-group{
+        padding:50x;
+    }
+</style>
+    <div class="input-group">
+        <label>
+            {{ field.label_tag }}
+        </label>
+        <div >{{field}}</div>
+
+    </div>
+{% endfor %}

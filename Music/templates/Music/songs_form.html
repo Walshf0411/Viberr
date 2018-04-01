@@ -1,0 +1,21 @@
+{% extends 'Music/navbar.html' %}
+
+{% block title %}
+Add a Song
+{% endblock%}
+
+{% block body%}
+<h1>Song Create form</h1>
+<!--Form control-->
+<form action="" method="POST">
+    {%csrf_token%}
+    <div class="input-group" >
+        {% include 'Music/form-template.html'%}
+    </div>
+    <div class="input-group btn">
+        <button class="btn btn-success" type="submit">Add</button>
+    </div>
+</form>
+
+
+{% endblock %}

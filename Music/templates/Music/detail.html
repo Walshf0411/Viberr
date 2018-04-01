@@ -1,0 +1,33 @@
+{% extends 'Music/navbar.html'%}
+{% block title %}
+{{ pk.album_title }}
+{% endblock %}
+
+<!--The result is stored in iterable named a/c to the model name-->
+{% block body %}
+<div class="jumbotron" align="center">
+<img src="{{albums.album_logo.url}}" alt="album logo goes here"
+     class="img-responsive" width="150" height="200">
+<h1>Album Title : {{ albums.album_title }}</h1>
+<h3>Artist name : {{ albums.artist }}</h3>
+
+<a href="{% url 'Music:album-update' albums.pk %}"><button class="btn btn-primary">
+        <span class="glyphicon glyphicon-plus"></span>&nbspUpdate Album
+</button></a>
+
+<h3>Songs : </h3>
+
+<ul>
+    {% for song in albums.songs_set.all %}
+    <a href="{% url 'Music:song-detail' song.pk %}"><li>{{song.song_title}}</li></a>
+    {%endfor%}
+    <br>
+    <a href="{% url 'Music:album-delete' albums.pk %}"><button class="btn btn-danger">
+        <span class="glyphicon glyphicon-trash"></span>
+    </button></a>&nbsp&nbsp
+    <a href="{% url 'Music:song-create'%}"><button class="btn btn-primary">
+        <span class="glyphicon glyphicon-plus"></span>&nbspAdd a new Song
+    </button></a>
+</ul>
+</div>
+{% endblock %}
