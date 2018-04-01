@@ -17,4 +17,6 @@ urlpatterns = [
 
     url(r'^(?P<pk>[0-9]+)/update/$', views.AlbumsUpdate.as_view(), name='album-update'),
     url(r'albums/song/(?P<pk>[0-9]+)/update/$', views.SongsUpdate.as_view(), name='song-update'),
+
+    url(r'^register/$', views.UserFormView.as_view(), name='register')
 ]

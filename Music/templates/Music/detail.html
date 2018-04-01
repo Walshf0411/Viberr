@@ -8,7 +8,7 @@
 <div class="jumbotron" align="center">
 <img src="{{albums.album_logo.url}}" alt="album logo goes here"
      class="img-responsive" width="150" height="200">
-<h1>Album Title : {{ albums.album_title }}</h1>
+<h2>Album Title : {{ albums.album_title }}</h2>
 <h3>Artist name : {{ albums.artist }}</h3>
 
 <a href="{% url 'Music:album-update' albums.pk %}"><button class="btn btn-primary">

@@ -8,7 +8,7 @@ Details for {{songs.song_title}}
 
 {% block body %}
 <div class="jumbotron text-center">
-<h1>{{ songs.song_title }}</h1>
+<h2>{{ songs.song_title }}</h2>
 
 <h3><strong>Song album : </strong>{{songs.album}}</h3>
 <h3><strong>Song format : </strong>{{songs.file_type}}</h3>
@@ -18,8 +18,8 @@ Details for {{songs.song_title}}
 </a>
 
 <a href="{% url 'Music:song-update' songs.pk %}">
-    <button class="btn btn-Primary">
-    <span class="glyphicon glyphicon-plus"></span>Update Song</button>
+    <button class="btn btn-primary">
+    <span class="glyphicon glyphicon-plus"></span>&nbspUpdate Song</button>
 </a>
     </div>
 {% endblock %}

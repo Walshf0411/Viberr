@@ -7,17 +7,45 @@ Albums
 {% block body %}
 <h1>This is a list of all albums.</h1>
 
-<ul>
-    {% for album in object_list%}
-    <li>
-        <a href="{% url 'Music:detail' album.id %}">{{ album.album_title }}</a>
-    </li>
-    {% endfor %}
-</ul>
 <a href="{% url 'Music:album-create' %}">
     <button class="btn btn-primary">
         <span class="glyphicon glyphicon-plus"></span>&nbspAdd an Album
     </button>
 </a>
+<br>
+<br>
+{% for album in albums %}
+<div class="container">
+    <div class="row">
+        <!---Will contain the image of the album-->
+        <div class="col-sm-4">
+            <img src="{{album.album_logo.url}}" class="img-responsive" style="padding:10px;margin:10px;">
+        </div>
+        <!--Will display the contents of the album and contain a link to the detail-->
+        <div clas="col-sm-8" >
+            <div class="row">
+                <div class="col-sm-6">
+                    <h3>Album details</h3>
+                    <h4><strong>Artist Name : </strong>
+                        {{album.artist}}
+                    </h4>
+                    <h4><strong>Genre : </strong>
+                        {{album.genre}}
+                    </h4>
+                </div>
+                <div class="col-sm-6">
+                    <a href="{% url 'Music:detail' album.id %}">
+                        <button class="btn btn-info">
+                            <span class="glyphicon glyphicon-icon-sign"></span>&nbspView Details
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <br>
+</div>
+{% endfor %}
 
 {% endblock %}
